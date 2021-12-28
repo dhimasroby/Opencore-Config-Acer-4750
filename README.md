@@ -1,5 +1,6 @@
-## Opencore Config for Acer Aspire 4750 Series<br>
-### Tested on macOS Mojave 10.14
+## Opencore Config for Acer Aspire 4750 Series *(Update Soon)*<br>
+### Tested on macOS Mojave 10.14.
+
 
 ## Overview:
 &radic;  Intel HD 3000 Working [ [Legacy Video Patch](https://github.com/chris1111/Legacy-Video-patch "Legacy Video Patch") ]<br>
@@ -47,40 +48,7 @@ SAT0 -> SATA | SATA rename
 #### Driver
 - ***HfsPlusLegacy***: Sandy Bridge lacks of RDRAND instruction support hence a legacy variant of HfsPlus driver is **required**
 
-#### Kexts
-Kext | Description
---- | --- |
-RealtekRTL8111.kext | Ethernet Driver
-USBMapLegacy.kext |  *[USB Mapping](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html "USB Mapping")*
 
-## Directories
-```
-├── EFI
-│   └── OC
-│       ├── ACPI
-│       │   ├── SSDT-EC.aml
-│       │   ├── SSDT-PLUG.aml
-│       │   ├── SSDT-PM.aml
-│       │   ├── SSDT-PMC.aml
-│       │   └── SSDT-SBUS-MCHC.aml
-│       ├── Drivers
-│       │   ├── AudioDxe.efi
-│       │   ├── OpenCanopy.efi
-│       │   ├── OpenHfsPlus.efi
-│       │   └── OpenRuntime.efi
-│       ├── Kexts
-│       │   ├── AppleALC.kext
-│       │   ├── Lilu.kext
-│       │   ├── SMCProcessor.kext
-│       │   ├── SMCSuperIO.kext
-│       │   ├── NVMeFix.kext.kext
-│       │   ├── VirtualSMC.kext
-│       │   ├── RealtekRTL8111.kext
-│       │   └── USBMapLegacy.kext
-│       │   └── WhateverGreen.kext
-│       ├── OpenCore.efi
-│       └── config.plist
-```
 
 
 
