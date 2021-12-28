@@ -1,21 +1,19 @@
-## Opencore Config for Acer Aspire 4750 Series
-### Tested on macOS Mojave 10.14 & Catalina 10.15
-#### Overview:
-&radic;  NVIDIA GeForce 210 Working [ [Legacy Video Patch](https://github.com/chris1111/Legacy-Video-patch "Legacy Video Patch") ]<br>
-&radic;  Audio + Mic<br>
-&radic;  Sleeping<br>
-&radic;  USB Mapping<br>
+## Opencore Config for Acer Aspire 4750 Series<br>
+### Tested on macOS Mojave 10.14
 
-#### Specification :
-• Mainboard : MSI MS-7788 H61M-P31 (G3)<br>
-• Chipset : Intel® H61 (B3)<br>
-• Processor : Intel® Core&trade; i3-200 CPU @ 3.10GHz (4 CPUs)<br>
-• RAM : 6GB DDR3<br>
-• BIOS : UEFI MSI-Built In V 3.6<br>
-• Audio : Realtek® ALC887<br>
-• Ethernet : PCI Express LAN 10/100/1000 Fast Ethernet by Realtek 8111E<br>
-• VGA : NVIDIA GeForce 210 - PCI Express 1024MB<br>
-• Bootloader : **OpenCore version 0.7.5**<br>
+## Overview:
+&radic;  Intel HD 3000 Working [ [Legacy Video Patch](https://github.com/chris1111/Legacy-Video-patch "Legacy Video Patch") ]<br>
+&radic;  Audio + Mic<br>
+&radic;  Battery Status<br>
+&radic;  WiFi [ [Atheros Kext](https://github.com/ipang-dwi/atheros "Atheros Kext") ]<br>
+&radic;  Sleeping<br>
+&radic;  Bootcamp<br>
+&radic;  USB Mapping + Webcam [ [USB Inject All](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/ "USB Inject All") ]<br>
+
+#### Not Working : *USB 3.0*
+
+## Known Issue :
+- 2nd Gen HD Graphic is problematic, e.g. [random screen freezing](https://www.tonymacx86.com/threads/intel-hd3000-artifracts-freezes.178302/ "random screen freezing")<br>
 
 
 ## OpenCore Starting Point : [Install Guide](https://dortania.github.io/OpenCore-Install-Guide/ "Install Guide")
@@ -44,6 +42,10 @@ Patch | Description
 --- | --- |
 EHC1 -> EH01 | USB rename
 EHC2 -> EH02 | USB rename
+SAT0 -> SATA | SATA rename
+
+#### Driver
+- ***HfsPlusLegacy***: Sandy Bridge lacks of RDRAND instruction support hence a legacy variant of HfsPlus driver is **required**
 
 #### Kexts
 Kext | Description
